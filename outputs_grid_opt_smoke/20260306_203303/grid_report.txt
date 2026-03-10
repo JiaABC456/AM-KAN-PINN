@@ -1,0 +1,12 @@
+MM-Q3D-KAN-PINN Grid Search Report
+================================================================================
+Total runs: 2
+CSV files: data/small_TR_1_2109.csv
+Ranking metric: test_rmse_degC
+Skip existing: True
+Generated at: 2026-03-06T20:33:15.953124
+
+Rank | TestLoss | ValBest | MAE(degC) | RMSE(degC) | MSE(degC^2) | s1 | w_pde | pde_every | lr | epochs_done | best_epoch | return | run
+--------------------------------------------------------------------------------
+   1 | 0.272936 | 0.486378 | 87.186928 |  95.157814 |  9055.009766 |  1 |  0.03 |         4 | 1.0e-04 |           1 |         1 |      0 | outputs_grid_opt_smoke/20260306_203303/run_02_s1_1_wp_0.030_pe_4_lr_1.0e-04
+   2 | 0.251447 | 0.087771 | 80.602188 | 100.464767 | 10093.169922 |  1 |  0.03 |         4 | 3.0e-04 |           1 |         1 |      0 | outputs_grid_opt_smoke/20260306_203303/run_01_s1_1_wp_0.030_pe_4_lr_3.0e-04
