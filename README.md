@@ -1,1 +1,1 @@
-# AM-KAN-PINN
+# MM-Q3D-KAN-PINN

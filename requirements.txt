@@ -1,0 +1,18 @@
+# MM-Q3D-KAN-PINN reproducible dependencies
+# Python: 3.12.x
+
+# Core scientific stack
+numpy==2.3.2
+pandas==3.0.1
+scipy==1.17.1
+scikit-learn==1.8.0
+matplotlib==3.10.5
+joblib==1.5.3
+threadpoolctl==3.6.0
+tqdm==4.66.4
+
+# Logging
+tensorboard==2.20.0
+
+# PyTorch CUDA 12.8 wheelscu128/torch-2.8.0%2Bcu128-cp312-cp312-manylinux_2_28_x86_64.whl#sha256=4354fc05bb79b208d6995a04ca1ceef6a9547b1c4334435574353d381c55087c
+# orchvision @ https://download.pytorch.org/whl/cu128/torchvision-0.23.0%2Bcu128-cp312-cp312-manylinux_2_28_x86_64.whl#sha256=9cb3c13997afcb

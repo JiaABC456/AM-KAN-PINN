@@ -1,0 +1,82 @@
+MM-Q3D-KAN-PINN Training Config
+========================================
+
+[DATA]
+csv_file=data/TR_1_2109.csv
+csv_files=
+global_y_normalize_multi=True
+split_mode=temporal
+seed=42
+deterministic=False
+
+[TRAINING]
+epochs=120
+patience=40
+min_epochs_before_early_stop=40
+stage1_epochs=20
+train_batch_size=2048
+eval_batch_size=4096
+train_samples_per_epoch=300000
+val_samples=0
+test_samples=0
+num_workers=-1
+
+[OPTIMIZER]
+lr=0.0001
+weight_decay=1e-05
+
+[PINN]
+use_pde=True
+pde_every_n_batches=20
+pde_warmup_epochs=0
+pde_subset_size=128
+max_pde_weight=0.05
+pde_ramp_epochs=30
+use_adaptive_pde_weight=True
+auto_pde_backoff=True
+pde_backoff_patience=3
+pde_backoff_rel_increase=0.02
+pde_backoff_factor=0.7
+min_pde_weight=0.005
+pde_every_backoff_factor=1.5
+max_pde_every_n_batches=100
+
+[LOGGING_AND_PLOTS]
+log_every=200
+plot_series_points=120
+output_dir=outputs
+
+[REFERENCE_LAST_RESULT]
+device=cuda
+epochs_completed=60
+best_epoch=20
+best_val_loss=0.039606
+test_loss=0.085186
+test_mae_degC=29.216606
+test_rmse_degC=32.775051
+test_mse_degC2=1074.203857
+
+[RUN_COMMAND]
+python main.py \
+  --csv-file data/TR_1_2109.csv \
+  --output-dir outputs \
+  --split-mode temporal \
+  --seed 42 \
+  --epochs 120 \
+  --patience 40 \
+  --min-epochs-before-early-stop 40 \
+  --stage1-epochs 20 \
+  --train-batch-size 2048 \
+  --eval-batch-size 4096 \
+  --train-samples-per-epoch 300000 \
+  --val-samples 0 \
+  --test-samples 0 \
+  --lr 1e-4 \
+  --weight-decay 1e-5 \
+  --pde-every-n-batches 20 \
+  --pde-subset-size 128 \
+  --max-pde-weight 0.05 \
+  --pde-ramp-epochs 30 \
+  --auto-pde-backoff \
+  --log-every 200 \
+  --plot-series-points 120
