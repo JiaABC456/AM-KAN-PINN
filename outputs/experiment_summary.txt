@@ -1,0 +1,35 @@
+MM-Q3D-KAN-PINN Experiment Summary
+========================================
+Device: cuda
+CSV Files: data/TR_1_2109.csv
+Global Y normalize (multi): True
+Split mode: random
+Random seed: 42
+Stage1 epochs (data-only): 20
+Epochs completed: 500
+Best epoch: 497
+Best Val Loss: 0.000380
+Test Loss: 0.000379
+Test MAE (°C): 0.370114
+Test RMSE (°C): 2.575359
+Test MSE (°C^2): 6.632475
+Train Samples/Epoch: 300000
+Val Samples: 6603558
+Test Samples: 3301779
+Train Batch: 2048
+Eval Batch: 4096
+PDE every N batches (init): 20
+PDE every N batches (final): 100
+PDE warmup epochs: 0
+PDE subset size: 128
+Max PDE weight (init): 0.05
+Max PDE weight (final): 0.005
+PDE ramp epochs: 30
+Adaptive PDE weight: True
+Auto PDE backoff: True
+Auto PDE backoff events: 7
+Deterministic mode: False
+Use AM adaptive self-attention: True
+AM dropout: 0.05
+Learning rate: 0.0001
+Weight decay: 1e-05
