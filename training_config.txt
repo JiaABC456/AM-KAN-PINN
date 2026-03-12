@@ -10,7 +10,7 @@ seed=42
 deterministic=False
 
 [TRAINING]
-epochs=120
+epochs=500
 patience=40
 min_epochs_before_early_stop=40
 stage1_epochs=20
@@ -62,7 +62,7 @@ python main.py \
   --output-dir outputs \
   --split-mode temporal \
   --seed 42 \
-  --epochs 120 \
+  --epochs 500 \
   --patience 40 \
   --min-epochs-before-early-stop 40 \
   --stage1-epochs 20 \
